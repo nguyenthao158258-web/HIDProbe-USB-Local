@@ -4,13 +4,13 @@ Trang nay chi public file IPA de cai tren iPhone bang TrollStore.
 
 ## Tai IPA ngay
 
-👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_USB_NATIVE_STREAM_TROLLSTORE_20260625_164057.ipa)
+👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_OK_COUNTDOWN_FORCE_TOAST_TROLLSTORE_20260625_1810.ipa)
 
-Ten file: `HIDProbeApp_USB_NATIVE_STREAM_TROLLSTORE_20260625_164057.ipa`
+Ten file: `HIDProbeApp_OK_COUNTDOWN_FORCE_TOAST_TROLLSTORE_20260625_1810.ipa`
 
-Ban nay dung USB native stream cho che do cam day: man hinh, HID va Lua di qua bridge USB native trong app Mac, khong con dung HTTP pull trong giao dien USB. Bang Lua OK trong app HID tren iPhone van co chon nhanh 5 phut/10 phut, chinh chu ky, lap vo cuc, hien dem nguoc dang dong ho `05:00`, `04:59`, `04:58`.
+Ban nay dung USB native stream cho che do cam day: man hinh, HID va Lua di qua bridge USB native trong app Mac. Lua OK co chon nhanh 5 phut/10 phut, chinh chu ky, lap vo cuc. Dong ho dem nguoc duoc ep hien truc tiep tren toast/HUD iPhone dang `OK con 04:59`, `OK con 04:58`, khong chi nam trong bang HID.
 
-SHA256: `c385f61576e3e91bded28957d1ba7799a40d898519b09fed13e23d165538da6f`
+SHA256: `8729b1c5ede74358e7982f831dee4b02e152a67591cfdcc8a1bca73a27811024`
 
 ## Ghi chu
 
