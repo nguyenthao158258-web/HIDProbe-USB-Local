@@ -1,6 +1,6 @@
-# HIDProbe USB Local IPA
+# HIDProbe USB Local Downloads
 
-Trang nay chi public file IPA de cai tren iPhone bang TrollStore.
+Trang nay public file IPA cho iPhone va goi ZIP source/handoff de build Windows EXE.
 
 ## Tai IPA ngay
 
@@ -12,10 +12,19 @@ Ban nay dung USB native stream cho che do cam day: man hinh, HID va Lua di qua b
 
 SHA256: `8729b1c5ede74358e7982f831dee4b02e152a67591cfdcc8a1bca73a27811024`
 
+## Tai goi source de build Windows EXE
+
+👉 [Bam vao day de tai ZIP Windows EXE source](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbe_USB_LOCAL_WINDOWS_EXE_SOURCE_20260625_1815.zip)
+
+Ten file: `HIDProbe_USB_LOCAL_WINDOWS_EXE_SOURCE_20260625_1815.zip`
+
+Goi nay de dua cho Codex/agent khac port app USB Local sang Windows va dong goi thanh `.exe`. Goi gom source web UI, Swift macOS reference, README handoff va prompt build EXE. Khong phai file EXE san.
+
+SHA256: `f05bd59e4f4626acf93d15ca1149d027aafd91dc7a53c13c3eaf36527afb1631`
+
 ## Ghi chu
 
 - File nay chi la IPA cho iPhone.
-- Khong public source code.
-- Khong public app dieu khien tren may tinh/macOS.
-- Khong public file cai dat may tinh.
+- ZIP Windows EXE source chi de build/port app dieu khien tren Windows.
+- Hien chua co file `.exe` san trong repo nay.
 - Cai bang TrollStore tren iPhone.
