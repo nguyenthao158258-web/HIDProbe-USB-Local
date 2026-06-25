@@ -2,9 +2,11 @@
 
 Trang nay chi public file IPA de cai tren iPhone bang TrollStore.
 
-## Tai IPA
+## Tai IPA ngay
 
-- [HIDProbe_USB_Local_TrollStore_v0.2.0.ipa](dist/HIDProbe_USB_Local_TrollStore_v0.2.0.ipa)
+👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbe_USB_Local_TrollStore_v0.2.0.ipa)
+
+Ten file: `HIDProbe_USB_Local_TrollStore_v0.2.0.ipa`
 
 ## Ghi chu
 
