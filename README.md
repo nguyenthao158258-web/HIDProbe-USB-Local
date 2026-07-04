@@ -6,11 +6,11 @@ Khong public source code. Khong public app dieu khien may tinh.
 
 ## Tai IPA ngay
 
-👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_TEMPLATE_ONLY_POINT_20260704_1953.ipa)
+👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_GET_HAN_CARD_20260704_2213.ipa)
 
-Ten file: `HIDProbeApp_TEMPLATE_ONLY_POINT_20260704_1953.ipa`
+Ten file: `HIDProbeApp_GET_HAN_CARD_20260704_2213.ipa`
 
-Ban nay bo OCR tieng Han `ko-KR` va uu tien template matching cho nut `포인트 받기`. IPA co san template `point_receive_ko_button_template.png`; test thuc te qua Lua tren iPhone da tim dung nut voi score khoang `0.982` va tap dung nut.
+Ban nay them bang `Get Han` rieng trong tab Local, tuong tu `Lua OK tu dong`. Bam `Chay Get Han` thi doi 3 phut roi get lan 1, sau do chay tong 10 luot, moi luot cach nhau 22 phut. Nut `포인트 받기` duoc tim bang template `point_receive_ko_button_template.png`, khong dung OCR tieng Han.
 
 Van giu `hidprobe_agent` chay nen bang LaunchDaemon:
 
@@ -21,7 +21,7 @@ Van giu `hidprobe_agent` chay nen bang LaunchDaemon:
 - Co log: `/var/mobile/Library/Logs/hidprobe-agent.log`.
 - Co heartbeat: `/var/mobile/Library/Logs/hidprobe-agent-heartbeat.json`.
 
-SHA256 IPA: `00a863b5690d8be865d202981fcf50e645e4c3534454abf141952af92bbaa522`
+SHA256 IPA: `c082523230807b4db0495c43afe87e5d8c27b7b19fcda47e45a5ee62cf1ff8ce`
 
 ## Ghi chu
 
