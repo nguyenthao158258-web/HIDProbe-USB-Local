@@ -38,3 +38,4 @@ SHA256 DEB: `71db2973932c481b179b523b6d400a575990bcf685b5099fbb80e2940717e447`
 - Cai IPA bang TrollStore tren iPhone.
 - Neu agent chua load, dung file `install_hidprobe_agent_ssh.sh` trong ZIP de cai qua SSH.
 - Sau khi cai, kiem tra: `launchctl list | grep hidprobe`.
+- File memory/cach ket noi/cach viet Lua: [MEMORY_HIDPROBE_USB_LUA.md](./MEMORY_HIDPROBE_USB_LUA.md)
