@@ -6,11 +6,11 @@ Khong public source code. Khong public app dieu khien may tinh.
 
 ## Tai IPA ngay
 
-👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_TEMPLATE_MATCH_KOREAN_POINT_20260704_1918.ipa)
+👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_TEMPLATE_ONLY_POINT_20260704_1953.ipa)
 
-Ten file: `HIDProbeApp_TEMPLATE_MATCH_KOREAN_POINT_20260704_1918.ipa`
+Ten file: `HIDProbeApp_TEMPLATE_ONLY_POINT_20260704_1953.ipa`
 
-Ban nay uu tien template matching cho nut tieng Han `포인트 받기`, de tap dung nut khi Apple Vision OCR tren iOS 15 khong support `ko-KR`. Test thuc te qua Lua tren iPhone: template match score khoang `0.982`, toa do tam nut khoang `x=0.7673 y=0.4022`.
+Ban nay bo OCR tieng Han `ko-KR` va uu tien template matching cho nut `포인트 받기`. IPA co san template `point_receive_ko_button_template.png`; test thuc te qua Lua tren iPhone da tim dung nut voi score khoang `0.982` va tap dung nut.
 
 Van giu `hidprobe_agent` chay nen bang LaunchDaemon:
 
@@ -21,7 +21,7 @@ Van giu `hidprobe_agent` chay nen bang LaunchDaemon:
 - Co log: `/var/mobile/Library/Logs/hidprobe-agent.log`.
 - Co heartbeat: `/var/mobile/Library/Logs/hidprobe-agent-heartbeat.json`.
 
-SHA256 IPA: `5f38a508b8fc9123444ec9fd671c38ed93e9e2d1ea7701a513359859f1ac9a97`
+SHA256 IPA: `00a863b5690d8be865d202981fcf50e645e4c3534454abf141952af92bbaa522`
 
 ## Ghi chu
 
