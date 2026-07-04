@@ -6,11 +6,11 @@ Khong public source code. Khong public app dieu khien may tinh.
 
 ## Tai IPA ngay
 
-👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_GET_HAN_CARD_20260704_2213.ipa)
+👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_SEPARATE_STOP_BUTTONS_20260704_2235.ipa)
 
-Ten file: `HIDProbeApp_GET_HAN_CARD_20260704_2213.ipa`
+Ten file: `HIDProbeApp_SEPARATE_STOP_BUTTONS_20260704_2235.ipa`
 
-Ban nay them bang `Get Han` rieng trong tab Local, tuong tu `Lua OK tu dong`. Bam `Chay Get Han` thi doi 3 phut roi get lan 1, sau do chay tong 10 luot, moi luot cach nhau 22 phut. Nut `포인트 받기` duoc tim bang template `point_receive_ko_button_template.png`, khong dung OCR tieng Han.
+Ban nay tach rieng nut dung cua `Get Han` va `Lua OK tu dong`: khi `Get Han` dang chay thi chi hien `Dung Get Han`, khi OK dang chay thi chi hien `Dung OK`. Van giu bang `Get Han` rieng trong tab Local: bam `Chay Get Han` thi doi 3 phut roi get lan 1, sau do chay tong 10 luot, moi luot cach nhau 22 phut. Nut `포인트 받기` duoc tim bang template `point_receive_ko_button_template.png`, khong dung OCR tieng Han.
 
 Van giu `hidprobe_agent` chay nen bang LaunchDaemon:
 
@@ -21,7 +21,7 @@ Van giu `hidprobe_agent` chay nen bang LaunchDaemon:
 - Co log: `/var/mobile/Library/Logs/hidprobe-agent.log`.
 - Co heartbeat: `/var/mobile/Library/Logs/hidprobe-agent-heartbeat.json`.
 
-SHA256 IPA: `c082523230807b4db0495c43afe87e5d8c27b7b19fcda47e45a5ee62cf1ff8ce`
+SHA256 IPA: `921f51765ec9028d3efbc4358144cb48baea15af7c929516956420e4f61ff4bb`
 
 ## Ghi chu
 
