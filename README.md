@@ -6,11 +6,11 @@ Khong public source code. Khong public app dieu khien may tinh.
 
 ## Tai IPA ngay
 
-👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_OCR_KOREAN_20260704_181503.ipa)
+👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_OCR_KOREAN_ACCURATE_20260704_184459.ipa)
 
-Ten file: `HIDProbeApp_OCR_KOREAN_20260704_181503.ipa`
+Ten file: `HIDProbeApp_OCR_KOREAN_ACCURATE_20260704_184459.ipa`
 
-Ban nay them OCR tieng Han `ko-KR` cho `tapText/findText` va giu `hidprobe_agent` chay nen bang LaunchDaemon:
+Ban nay sua OCR tieng Han chinh xac hon: Vision OCR chay `ko-KR` rieng bang `.accurate`, sau do moi fallback `vi-VN/en-US`, va giu `hidprobe_agent` chay nen bang LaunchDaemon:
 
 - Agent nen listen port USB/native `17391`.
 - App HID chi la setup/config/status.
@@ -19,7 +19,7 @@ Ban nay them OCR tieng Han `ko-KR` cho `tapText/findText` va giu `hidprobe_agent
 - Co log: `/var/mobile/Library/Logs/hidprobe-agent.log`.
 - Co heartbeat: `/var/mobile/Library/Logs/hidprobe-agent-heartbeat.json`.
 
-SHA256 IPA: `ac952db02e5a111b0c1d297d3802711522b5ea3a4759527ae7992336b1bfebd3`
+SHA256 IPA: `938318d93678b868e95c32308454d3390c1a5a516747eaeda68a03a44574d71f`
 
 ## Tai goi installer agent
 
