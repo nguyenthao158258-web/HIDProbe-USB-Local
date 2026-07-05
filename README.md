@@ -6,11 +6,13 @@ Khong public source code. Khong public app dieu khien may tinh.
 
 ## Tai IPA ngay
 
-👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_HIDPROBE_AGENT_DAEMON_20260704_2342.ipa)
+👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_HIDPROBE_AGENT_LOAD_DIAG_20260705_0018.ipa)
 
-Ten file: `HIDProbeApp_HIDPROBE_AGENT_DAEMON_20260704_2342.ipa`
+Ten file: `HIDProbeApp_HIDPROBE_AGENT_LOAD_DIAG_20260705_0018.ipa`
 
 Ban nay chuyen port `17391` sang daemon rieng `HIDProbeAgent` chay bang LaunchDaemon `com.hidprobe.agent`. App HID mac dinh khong mo local server 17391 nua, chi la setup/config/status. `HIDProbeAgent` listen `0.0.0.0:17391`, xu ly HPB1 Health/Frame/Hid/Ack/Script, stream frame JPEG, tap/swipe/key/text va Lua co ban trong daemon.
+
+Ban LOAD_DIAG nay bo fallback `gui/<uid>` cho agent chinh de khong bao nham thanh cong. Man hinh app co dong `Agent:` hien truc tiep `loaded port=17391 ...` hoac `failed ...`. Log installer de doc loi: `/var/mobile/Documents/hidprobe-agent-install.log`.
 
 Van giu bang `Get Han` rieng va nut dung tach rieng cua `Get Han` / `Lua OK tu dong`.
 
@@ -25,7 +27,7 @@ Van giu bang `Get Han` rieng va nut dung tach rieng cua `Get Han` / `Lua OK tu d
 - Co log: `/var/log/hidprobe-agent.log`.
 - Co heartbeat: `/var/log/hidprobe-agent-heartbeat.json`.
 
-SHA256 IPA: `49cc03f0d20c1aa2c3a6cc787fd2b4541f6a8592c2edb1ae9273c36236274383`
+SHA256 IPA: `fd6e975b5aa1dde045698170ec2259b27f3ca64934186e887c9ae579331e2604`
 
 ## Ghi chu
 
