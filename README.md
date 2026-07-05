@@ -6,13 +6,13 @@ Khong public source code. Khong public app dieu khien may tinh.
 
 ## Tai IPA ngay
 
-👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_HIDPROBE_AGENT_SSH_READY_20260705_0859.ipa)
+👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_HIDPROBE_AGENT_EXTERNAL_DETECT_20260705_0903.ipa)
 
-Ten file: `HIDProbeApp_HIDPROBE_AGENT_SSH_READY_20260705_0859.ipa`
+Ten file: `HIDProbeApp_HIDPROBE_AGENT_EXTERNAL_DETECT_20260705_0903.ipa`
 
 Ban nay chuyen port `17391` sang daemon rieng `HIDProbeAgent` chay bang LaunchDaemon `com.hidprobe.agent`. App HID mac dinh khong mo local server 17391 nua, chi la setup/config/status. `HIDProbeAgent` listen `0.0.0.0:17391`, xu ly HPB1 Health/Frame/Hid/Ack/Script, stream frame JPEG, tap/swipe/key/text va Lua co ban trong daemon.
 
-Ban SSH_READY nay bo fallback `gui/<uid>` cho agent chinh de khong bao nham thanh cong. Man hinh app co dong `Agent:` hien truc tiep `loaded port=17391 ...` hoac `failed ...`. Neu thay `no_writable_system_launchdaemon_layout` thi IPA khong du quyen tu ghi LaunchDaemon, can cai/load `HIDProbeAgent` bang SSH root hoac package jailbreak. Log installer de doc loi: `/var/mobile/Documents/hidprobe-agent-install.log`.
+Ban EXTERNAL_DETECT nay bo fallback `gui/<uid>` cho agent chinh de khong bao nham thanh cong. Man hinh app co dong `Agent:` hien truc tiep `loaded port=17391 ...`, `loaded external port=17391`, hoac `failed ...`. Neu thay `no_writable_system_launchdaemon_layout` thi IPA khong du quyen tu ghi LaunchDaemon, can cai/load `HIDProbeAgent` bang SSH root hoac package jailbreak. Log installer de doc loi: `/var/mobile/Documents/hidprobe-agent-install.log`.
 
 Script root cua agent la `/var/mobile/Documents`, de `store_script`, `run_script` va Lua `screenshot()` ghi file on dinh hon tren roothide.
 
@@ -29,7 +29,7 @@ Van giu bang `Get Han` rieng va nut dung tach rieng cua `Get Han` / `Lua OK tu d
 - Co log: `/var/log/hidprobe-agent.log`.
 - Co heartbeat: `/var/log/hidprobe-agent-heartbeat.json`.
 
-SHA256 IPA: `4b793b6d8553e0404c1bcaee9fec1d95496bf4a073da3a154b6d1f28f8c5b162`
+SHA256 IPA: `bd7bd40bcbacc4cd14a13d506dacaabb20fe6d92e8707132820821edab42a02d`
 
 ## Ghi chu
 
