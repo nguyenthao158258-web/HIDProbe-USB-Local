@@ -6,11 +6,11 @@ Khong public source code. Khong public app dieu khien may tinh.
 
 ## Tai IPA moi nhat
 
-👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_DOPAMINE_PERSONA_RECOVERY_20260710191127.ipa)
+👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_DOPAMINE_PERSONA_COMPATIBLE_20260710201500.ipa)
 
-Ten file: `HIDProbeApp_DOPAMINE_PERSONA_RECOVERY_20260710191127.ipa`
+Ten file: `HIDProbeApp_DOPAMINE_PERSONA_COMPATIBLE_20260710201500.ipa`
 
-SHA256 IPA: `17df2eb149811b6536b6add2fd99873b417ee44058c099b55056af0c6c1a58c9`
+SHA256 IPA: `22b05d014e39996a19e23247609de82d7011c368ad3fa156a10662cec5718153`
 
 ## Ban nay sua gi
 
@@ -24,10 +24,11 @@ SHA256 IPA: `17df2eb149811b6536b6add2fd99873b417ee44058c099b55056af0c6c1a58c9`
 - Installer dat ownership cua plist/binary theo user mobile cho layout `gui/501`, thay vi ep root ownership.
 - Upgrade log ghi them uid/euid/gid/egid, owner/mode/size cua plist va binary, `manageruid`, `managername`, `launchctl error 85`, va ket qua tung lenh load.
 - Ban Dopamine recovery dung root persona helper de copy plist vao `/var/jb/Library/LaunchDaemons`, dat owner root va mode 0644. Muc dich la de Dopamine launchd hook mo watchdog va HID ngay sau khi Dopamine duoc kich hoat.
+- Build nay da bo entitlement `com.apple.private.persona-mgmt` lam TrollStore bao `0xe8008014`, nhung van giu root-persona spawn tren nen `platform-application` va `no-sandbox`.
 - Installer ghi marker build sau khi copy plist/bin thanh cong, tranh viec moi lan mo app lai kill/copy daemon lap lai.
 - Upgrade log co them exit code `launchctl_bootstrap` de doc loi neu iOS van chan bootstrap.
-- Build moi da bump `CFBundleVersion=20260710191127`, tranh tinh trang cai IPA moi nhung iOS/TrollStore van nhin nhu ban cu.
-- Daemon version: `hidprobe_daemon/1.3.8-persona-stage`.
+- Build moi da bump `CFBundleVersion=20260710201500`, tranh tinh trang cai IPA moi nhung iOS/TrollStore van nhin nhu ban cu.
+- Daemon version: `hidprobe_daemon/1.3.9-persona-compatible`.
 - `hidprobe_daemon` trong IPA da duoc ky bang entitlement rieng cua daemon, co:
   - `com.apple.frontboard.launchapplications`
   - `com.apple.springboard.launchapplications`
@@ -50,7 +51,7 @@ SHA256 IPA: `17df2eb149811b6536b6add2fd99873b417ee44058c099b55056af0c6c1a58c9`
 
 1. Cai IPA bang TrollStore.
 2. Mo HID Probe it nhat 1 lan de app copy/lap lai daemon.
-   - Voi ban Dopamine recovery: mo Filza truoc de `FilzaHelper` chay, sau do moi mo HID Probe.
+   - Voi ban Dopamine recovery: mo HID Probe mot lan de app stage LaunchDaemon vao `/var/jb`.
    - Kiem tra upgrade log co `rootless_stage success=true` truoc khi reboot.
 3. Trong app, dong `USB Local:` phai hien server app dang chay, khong phai `daemon_mode`.
 4. Tat nguon/bat lai iPhone de test reboot. Sau khi may len, doi khoang 30-60 giay roi kiem tra `/var/mobile/Documents/hidprobe_daemon_heartbeat.json`.
