@@ -6,11 +6,11 @@ Khong public source code. Khong public app dieu khien may tinh.
 
 ## Tai IPA moi nhat
 
-👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_DOPAMINE_PERSONA_COMPATIBLE_20260710201500.ipa)
+👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_DOPAMINE_ROOT_HELPER_LDID_20260710203500.ipa)
 
-Ten file: `HIDProbeApp_DOPAMINE_PERSONA_COMPATIBLE_20260710201500.ipa`
+Ten file: `HIDProbeApp_DOPAMINE_ROOT_HELPER_LDID_20260710203500.ipa`
 
-SHA256 IPA: `22b05d014e39996a19e23247609de82d7011c368ad3fa156a10662cec5718153`
+SHA256 IPA: `d64d237371cc5630dee2b699b167d7e6f2a92ee218331076b8ab4fdbfa23bcd8`
 
 ## Ban nay sua gi
 
@@ -24,11 +24,11 @@ SHA256 IPA: `22b05d014e39996a19e23247609de82d7011c368ad3fa156a10662cec5718153`
 - Installer dat ownership cua plist/binary theo user mobile cho layout `gui/501`, thay vi ep root ownership.
 - Upgrade log ghi them uid/euid/gid/egid, owner/mode/size cua plist va binary, `manageruid`, `managername`, `launchctl error 85`, va ket qua tung lenh load.
 - Ban Dopamine recovery dung root persona helper de copy plist vao `/var/jb/Library/LaunchDaemons`, dat owner root va mode 0644. Muc dich la de Dopamine launchd hook mo watchdog va HID ngay sau khi Dopamine duoc kich hoat.
-- Build nay da bo entitlement `com.apple.private.persona-mgmt` lam TrollStore bao `0xe8008014`, nhung van giu root-persona spawn tren nen `platform-application` va `no-sandbox`.
+- Build nay fake-sign bang `ldid` theo co che TrollStore. Chi executable chinh co `com.apple.private.persona-mgmt`; daemon va helper phu dung entitlement rieng khong co persona.
 - Installer ghi marker build sau khi copy plist/bin thanh cong, tranh viec moi lan mo app lai kill/copy daemon lap lai.
 - Upgrade log co them exit code `launchctl_bootstrap` de doc loi neu iOS van chan bootstrap.
-- Build moi da bump `CFBundleVersion=20260710201500`, tranh tinh trang cai IPA moi nhung iOS/TrollStore van nhin nhu ban cu.
-- Daemon version: `hidprobe_daemon/1.3.9-persona-compatible`.
+- Build moi da bump `CFBundleVersion=20260710203500`, tranh tinh trang cai IPA moi nhung iOS/TrollStore van nhin nhu ban cu.
+- Daemon version: `hidprobe_daemon/1.3.10-persona-ldid`.
 - `hidprobe_daemon` trong IPA da duoc ky bang entitlement rieng cua daemon, co:
   - `com.apple.frontboard.launchapplications`
   - `com.apple.springboard.launchapplications`
