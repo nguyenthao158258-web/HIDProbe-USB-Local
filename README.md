@@ -1,37 +1,49 @@
 # HIDProbe USB Local
 
-Trang nay chi public file cai dat de cai tren iPhone jailbreak/TrollStore.
+Repo nay chi public file cai dat IPA de cai tren iPhone TrollStore/no-jailbreak style.
 
 Khong public source code. Khong public app dieu khien may tinh.
 
-## Tai IPA ngay
+## Tai IPA moi nhat
 
-👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_HIDPROBE_AGENT_EXTERNAL_DETECT_20260705_0903.ipa)
+👉 [Bam vao day de tai IPA](https://raw.githubusercontent.com/nguyenthao158258-web/HIDProbe-USB-Local/main/dist/HIDProbeApp_TROLLSTORE_USB_LOCAL_HARD_UPGRADE_20260710_174849.ipa)
 
-Ten file: `HIDProbeApp_HIDPROBE_AGENT_EXTERNAL_DETECT_20260705_0903.ipa`
+Ten file: `HIDProbeApp_TROLLSTORE_USB_LOCAL_HARD_UPGRADE_20260710_174849.ipa`
 
-Ban nay chuyen port `17391` sang daemon rieng `HIDProbeAgent` chay bang LaunchDaemon `com.hidprobe.agent`. App HID mac dinh khong mo local server 17391 nua, chi la setup/config/status. `HIDProbeAgent` listen `0.0.0.0:17391`, xu ly HPB1 Health/Frame/Hid/Ack/Script, stream frame JPEG, tap/swipe/key/text va Lua co ban trong daemon.
+SHA256 IPA: `cc40876970a4fb31d46feec5d7bfe7ec783af2d5b07b08b847563a23d6fa3271`
 
-Ban EXTERNAL_DETECT nay bo fallback `gui/<uid>` cho agent chinh de khong bao nham thanh cong. Man hinh app co dong `Agent:` hien truc tiep `loaded port=17391 ...`, `loaded external port=17391`, hoac `failed ...`. Neu thay `no_writable_system_launchdaemon_layout` thi IPA khong du quyen tu ghi LaunchDaemon, can cai/load `HIDProbeAgent` bang SSH root hoac package jailbreak. Log installer de doc loi: `/var/mobile/Documents/hidprobe-agent-install.log`.
+## Ban nay sua gi
 
-Script root cua agent la `/var/mobile/Documents`, de `store_script`, `run_script` va Lua `screenshot()` ghi file on dinh hon tren roothide.
+- Day la line IPA TrollStore/no-jailbreak app-local USB.
+- App HID tu mo USB Local server port `17391` mac dinh.
+- Khong mac dinh chuyen port `17391` sang `HIDProbeAgent` external LaunchDaemon nua.
+- `hidprobe_daemon` chi giu vai tro watchdog: neu iOS kill HIDProbeApp thi daemon goi SpringBoard/FrontBoard de mo lai app.
+- Khi app moi mo len, installer daemon se hard-upgrade: bootout/kill daemon cu, xoa file HIDProbe-owned cu, copy lai `hidprobe_daemon` va `com.local.hidprobe.daemon.plist` moi.
+- Build moi da bump `CFBundleVersion=20260710174849`, tranh tinh trang cai IPA moi nhung iOS/TrollStore van nhin nhu ban cu.
+- `hidprobe_daemon` trong IPA da duoc ky bang entitlement rieng cua daemon, co:
+  - `com.apple.frontboard.launchapplications`
+  - `com.apple.springboard.launchapplications`
+  - `com.apple.runningboard.launchprocess`
+  - `platform-application`
+  - `no-sandbox` / `no-container`
 
-Van giu bang `Get Han` rieng va nut dung tach rieng cua `Get Han` / `Lua OK tu dong`.
+## Duong dan runtime tren iPhone
 
-`HIDProbeAgent` LaunchDaemon:
+- App bundle ID: `com.local.hidprobe`
+- USB Local app server: port `17391`
+- Daemon binary TrollStore/no-JB: `/var/mobile/Documents/hidprobe_daemon`
+- Daemon plist TrollStore/no-JB: `/var/mobile/Library/LaunchDaemons/com.local.hidprobe.daemon.plist`
+- Daemon heartbeat: `/var/mobile/Documents/hidprobe_daemon_heartbeat.json`
+- Daemon log: `/var/mobile/Documents/hidprobe_daemon.log`
+- Daemon upgrade log: `/var/mobile/Documents/hidprobe_daemon_upgrade.log`
 
-- Binary: `/usr/local/bin/HIDProbeAgent` hoac rootless `/var/jb/usr/local/bin/HIDProbeAgent`.
-- Plist: `/Library/LaunchDaemons/com.hidprobe.agent.plist` hoac rootless `/var/jb/Library/LaunchDaemons/com.hidprobe.agent.plist`.
-- Agent nen listen IP/native `0.0.0.0:17391`.
-- App HID chi la setup/config/status.
-- Dong app HID, ve Home, reset data app: agent van co the song neu LaunchDaemon da load.
-- Ho tro rootless `/var/jb` va rootful.
-- Co log: `/var/log/hidprobe-agent.log`.
-- Co heartbeat: `/var/log/hidprobe-agent-heartbeat.json`.
+## Cach cai
 
-SHA256 IPA: `bd7bd40bcbacc4cd14a13d506dacaabb20fe6d92e8707132820821edab42a02d`
+1. Cai IPA bang TrollStore.
+2. Mo HID Probe it nhat 1 lan de app copy/lap lai daemon.
+3. Trong app, dong `USB Local:` phai hien server app dang chay, khong phai `daemon_mode`.
+4. Neu vua cai de len ban cu, hay mo app moi nay mot lan de no hard-upgrade/xoa file daemon cu.
 
-## Ghi chu
+## Luu y
 
-- Cai IPA bang TrollStore tren iPhone.
-- Sau khi cai, kiem tra: `launchctl list | grep hidprobe`.
+Ban `HIDPROBE_AGENT_EXTERNAL_DETECT_20260705_0903` cu dung line external agent rieng va co the lam app HID khong tu mo local server `17391`. Neu muc tieu la IPA no-jailbreak app-local USB thi dung ban moi nhat o tren.
